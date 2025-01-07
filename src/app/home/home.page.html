@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container" class="fondo">
+    <strong>Ready to create an app?</strong>
+    <ion-button expand="block" [routerLink]="['/principal']">Block</ion-button> <!--con routerLink podemos ir de un lugar a otro con los botones-->
+  <ion-list>
+    <ion-item>
+      <ion-select label="Seleccione una especie" label-placement="floating">
+        <ion-select-option value="apple">Gatos</ion-select-option>
+        <ion-select-option value="banana">Perros</ion-select-option>
+        <ion-select-option value="orange">Conejos</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  </div>
+</ion-content>

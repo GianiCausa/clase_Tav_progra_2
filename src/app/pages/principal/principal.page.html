@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>principal</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="fondo"> 
+    <h1 style="text-align: center; font-family: Arial, Helvetica, sans-serif; color: rgb(0, 110, 161);">Bienvenido</h1> <!--podemos poner style si queremos para centrar un texto-->
+  
+  <div class="centrado">
+    <img class="img" src="assets/mondongo.jpg" alt="mondongo"> <!--arrastra la imagen a assets sin que quede en icon para que quede con el src igual a este-->
+  </div>
+  <div class="centrado"> <!--con la clase vamos a scss y ponemos text-align: center; para que quede en el centro y tambien funciona en imagenes-->
+    <ion-button color="secondary" [routerLink]="['/registro']">Registro</ion-button> <!--con routerLink podemos ir de un lugar a otro con los botones-->
+    <ion-button color="danger" [routerLink]="['/home']">Home</ion-button> <!--con routerLink podemos ir de un lugar a otro con los botones-->
+  </div>
+  </div>
+</ion-content>

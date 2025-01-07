@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Registro de Usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <h1 style="text-align: center;">Registro</h1>
+  <ion-item>
+    <ion-input label="Ingrese usuario" labelPlacement="floating" placeholder="nickname" [(ngModel)]="nickname"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input label="Ingrese edad" labelPlacement="floating" placeholder="28" type="number" [(ngModel)]="edad"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input label="Ingrese correo" labelPlacement="floating" placeholder="example@example.com" type="email" [(ngModel)]="correo"></ion-input>
+  </ion-item>
+  <div class="centrado">
+    <ion-button color="secondary" [routerLink]="['/principal']">Registrar {{ nickname }}</ion-button>  <!--con routerLink podemos ir de un lugar a otro con los botones-->
+    <ion-button color="danger" [routerLink]="['/home']">Cancelar</ion-button> <!--con routerLink podemos ir de un lugar a otro con los botones-->
+  </div>
+</ion-content>

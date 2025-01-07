@@ -1,0 +1,7 @@
+{
+  "name": "practicaFE",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
