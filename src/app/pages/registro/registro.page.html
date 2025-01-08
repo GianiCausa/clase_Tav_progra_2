@@ -1,5 +1,9 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button> 
+      <ion-back-button></ion-back-button> <!--boton para retroceder-->
+    </ion-buttons>
     <ion-title>Registro de Usuario</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -16,7 +20,9 @@
     <ion-input label="Ingrese correo" labelPlacement="floating" placeholder="example@example.com" type="email" [(ngModel)]="correo"></ion-input>
   </ion-item>
   <div class="centrado">
-    <ion-button color="secondary" [routerLink]="['/principal']">Registrar {{ nickname }}</ion-button>  <!--con routerLink podemos ir de un lugar a otro con los botones-->
+    <ion-button color="secondary" (click)="validarCampos()">Registrar {{ nickname | uppercase }}</ion-button>  <!--con routerLink podemos ir de un lugar a otro con los botones-->
     <ion-button color="danger" [routerLink]="['/home']">Cancelar</ion-button> <!--con routerLink podemos ir de un lugar a otro con los botones-->
+
+    <h3>{{edad | percent}}</h3> <!--cambia a porcentaje la edad-->
   </div>
 </ion-content>
