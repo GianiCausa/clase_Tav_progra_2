@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>decimas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <h1 style="text-align: center;">Decimas</h1>
+  <ion-item>
+    <ion-input label="Ingrese usuario" labelPlacement="floating" placeholder="nickname" [(ngModel)]="nombre"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input label="Ingrese clave" labelPlacement="floating" placeholder="**********" type="password" [(ngModel)]="clave"></ion-input>
+  </ion-item>
+  <div class="centrado">
+    <ion-button color="secondary" (click)="limpiarCampos()">Limpiar</ion-button>  <!--con routerLink podemos ir de un lugar a otro con los botones-->
+    <ion-button color="danger" (click)="entrar()">Entrar</ion-button> <!--con routerLink podemos ir de un lugar a otro con los botones-->
+  </div>
+</ion-content>

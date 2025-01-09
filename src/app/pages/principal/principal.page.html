@@ -1,16 +1,13 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button> 
-      <ion-back-button></ion-back-button> <!--boton para retroceder-->
-    </ion-buttons>
+    <app-comp1 titulo="Soy un titulo" [nick]="nickname"></app-comp1> <!--con los corchetes sabra que es una variable-->
     <ion-title>principal</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <div class="fondo"> 
-    <h1 style="text-align: center; font-family: Arial, Helvetica, sans-serif; color: rgb(0, 110, 161);">Bienvenido</h1> <!--podemos poner style si queremos para centrar un texto-->
+    <h1 style="text-align: center; font-family: Arial, Helvetica, sans-serif; color: rgb(0, 110, 161);">Bienvenido {{ nickname }}</h1> <!--podemos poner style si queremos para centrar un texto, el nickname de aca es con la libreria navigationextras este aparecera en el bienvenidos cuando le confirme el nombre en el registro-->
   
   <div class="centrado">
     <img class="img" src="assets/mondongo.jpg" alt="mondongo"> <!--arrastra la imagen a assets sin que quede en icon para que quede con el src igual a este-->

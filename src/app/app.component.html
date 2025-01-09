@@ -1,26 +1,28 @@
 <ion-app>
   <ion-menu contentId="main-content"> <!--si tenemos mas de un menu hay que ponerle aqui contentId="main-content"-->
     <ion-header>  <!--aqui puede ir el logo o un titulo normal-->
-      <ion-toolbar color="secondary">
+      <ion-toolbar color="secondary"> <!--con esto le ponemos un color en el titulo del menu-->
         <ion-title>Menú Principal</ion-title>
       </ion-toolbar>
     </ion-header>
 
     <ion-content>
-      <ion-list>
-        <ion-item>
-          <ion-icon name="boat-outline"></ion-icon>
-          <ion-label>registro</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-icon name="chatbox-outline"></ion-icon>
-          <ion-label>home</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-icon name="cloud-outline"></ion-icon>
-          <ion-label>principal</ion-label>
-        </ion-item>
-      </ion-list>
+      <ion-menu-toggle> <!--con esto cuando vaya de un item del menu a otro este menu desaparecera para que tenga una mejor experiencia-->
+        <ion-list>
+          <ion-item [routerDirection]="'root'" [routerLink]="['/registro']"> <!--asi debe ir -->
+            <ion-icon name="boat-outline"></ion-icon>
+            <ion-label>registro</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="chatbox-outline"></ion-icon>
+            <ion-label>home</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="cloud-outline"></ion-icon>
+            <ion-label>principal</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-menu-toggle>
     </ion-content>
   </ion-menu>
 

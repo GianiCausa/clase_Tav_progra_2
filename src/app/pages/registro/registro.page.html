@@ -23,6 +23,7 @@
     <ion-button color="secondary" (click)="validarCampos()">Registrar {{ nickname | uppercase }}</ion-button>  <!--con routerLink podemos ir de un lugar a otro con los botones-->
     <ion-button color="danger" [routerLink]="['/home']">Cancelar</ion-button> <!--con routerLink podemos ir de un lugar a otro con los botones-->
 
-    <h3>{{edad | percent}}</h3> <!--cambia a porcentaje la edad-->
+    <h3 *ngIf="edad > 25">{{edad | percent}}</h3> <!--cambia a porcentaje la edad-->
+    <h1 *ngFor="let x of listaNombres"> {{x.nombre}}</h1> <!--se mostraran los nombres dentro de la lista-->
   </div>
 </ion-content>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationExtras, Router } from '@angular/router';
 import { AlertController, ToastController } from '@ionic/angular';
 
 @Component({
@@ -13,6 +13,16 @@ export class RegistroPage implements OnInit {
   correo: string = "";
   nickname: string = "";
   edad: number = 0; // podemos poner edad!: number; sin darle un valor inicial
+  //ngFor para recorrer datos
+  listaNombres: any = [{
+    nombre: "Jose"
+  },
+  {
+    nombre: "Maria"
+  },
+  {
+    nombre: "Juan"
+  }];
 
   constructor(private alertController: AlertController, private toastController: ToastController, private router: Router) { } //al router lo agregamos manual poniendo private router: Router
   //alerta intrusiva alert
@@ -67,7 +77,15 @@ export class RegistroPage implements OnInit {
       //el formulario es correcto y puedo realizar acciones
       this.presentAlert("Registro","Registro Completado")
       //redireccionar en caso de que se necesite
-      this.router.navigate(['/principal']) //poner todo esto igual a como sale aqui
+      //creando un diccionario de datos para enviar a la otra pagina
+      //luego de hacer esto debemos ir a la pagina donde mandamos todos estos datos y configurarla ahi
+      let navigationextras: NavigationExtras = {
+        state: {
+          nick: this.nickname,
+          ed: this.edad
+        }
+      }
+      this.router.navigate(['/principal'], navigationextras); //poner todo esto igual a como sale aqui, el navigationextras es opcional solo lo pondremos aqui si queremos mandar datos de una pagina a otra
     }else{
       // solo incluirlo en caso de que se necesite hacer algo diferente cuando el formulario no esta correcto 
     }
